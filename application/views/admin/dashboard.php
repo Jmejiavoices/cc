@@ -76,7 +76,7 @@
                 </li>
                 <li class="">
                     <a href="http://localhost/cc/admin/estadisticas" class="detailed">
-                        <span class="title">Estadisticas</span>
+                        <span class="title">Estadísticas</span>
                         <span class="details">Clientes Registrados</span>
                     </a>
                     <span class="icon-thumbnail"><i class="fa fa-dashboard"></i></span>
