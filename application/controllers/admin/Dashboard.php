@@ -26,6 +26,7 @@ class Dashboard extends CI_Controller
 
 		$data['js_page'] = '<script src="' . base_url() . 'assets/js/altas.js?cid='. date('Ymdhis') .'" type="text/javascript"></script>';
         $this->load->view('admin/dashboard', $data);
+
 		
     }
 
@@ -37,7 +38,7 @@ class Dashboard extends CI_Controller
 
 
 
-	public function fetch()
+	function fetch()
 	{
 		if ($this->input->is_ajax_request()) {
 			if ($posts = $this->crud_model->get_entries()) {
@@ -52,7 +53,7 @@ class Dashboard extends CI_Controller
 		}
 	}
 
-    public function insert()
+    function insert()
 	{
 		if ($this->input->is_ajax_request()) {
 			$this->form_validation->set_rules('name', 'name', 'required');
@@ -79,7 +80,7 @@ class Dashboard extends CI_Controller
 	}
 
 	
-	public function delete()
+	function delete()
 	{
 
 		if ($this->input->is_ajax_request()) {
@@ -97,7 +98,7 @@ class Dashboard extends CI_Controller
 		}
 	}
 
-	public function edit()
+	function edit()
 	{
 
 		if ($this->input->is_ajax_request()) {
@@ -116,7 +117,7 @@ class Dashboard extends CI_Controller
 		}
 	}
 
-	public function update()
+	function update()
 	{
 
 		if ($this->input->is_ajax_request()) {
@@ -151,7 +152,7 @@ class Dashboard extends CI_Controller
 	}
    
 
-    public function logout()
+    function logout()
 	{
 
         $this->session->sess_destroy();
